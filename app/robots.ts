@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://hairsalondirectories.com/sitemap.xml",
+    sitemap: "https://nailsalondirectories.com/sitemap.xml",
   };
 }
 

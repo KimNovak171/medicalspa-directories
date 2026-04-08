@@ -10,8 +10,8 @@ import { getDirectoryIndex, getStateSummary, getGlobalStats } from "@/lib/stateF
 export async function generateMetadata(): Promise<Metadata> {
   const stats = getGlobalStats();
   const total = stats.totalFacilities.toLocaleString();
-  const title = `Hair Salon Directory USA & Canada | ${total} verified salons`;
-  const description = `Browse ${total} verified hair salons and beauty businesses across the United States and Canada — all rated 3 stars or higher on Google Maps.`;
+  const title = `Nail Salon Directory USA & Canada | ${total} verified salons`;
+  const description = `Browse ${total} verified nail salons across the United States and Canada — all rated 3 stars or higher on Google Maps.`;
 
   return {
     title,
@@ -23,14 +23,14 @@ export async function generateMetadata(): Promise<Metadata> {
       title,
       description,
       url: "/",
-      siteName: "HairSalonDirectories.com",
+      siteName: "NailSalonDirectories.com",
       type: "website",
       images: [
         {
           url: "/og-image.svg",
           width: 1200,
           height: 630,
-          alt: "HairSalonDirectories.com homepage preview",
+          alt: "NailSalonDirectories.com homepage preview",
         },
       ],
     },
@@ -58,8 +58,8 @@ export default async function Home() {
       {
         "@type": "ListItem",
         position: 1,
-        name: "HairSalonDirectories.com",
-        item: "https://hairsalondirectories.com/",
+        name: "NailSalonDirectories.com",
+        item: "https://nailsalondirectories.com/",
       },
     ],
   };
@@ -74,13 +74,13 @@ export default async function Home() {
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
           <div className="space-y-6 rounded-2xl bg-brand-gradient px-6 py-8 text-brand-ink shadow-sm sm:px-8 sm:py-10">
             <p className="inline-flex rounded-full border border-brand-ink/20 bg-white/35 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] backdrop-blur-sm">
-              Hair Salon Directories
+              Nail Salon Directories
             </p>
             <h1 className="text-balance text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
-              Find Trusted Hair Salons — US States &amp; Canadian Provinces
+              Find Trusted Nail Salons — US States &amp; Canadian Provinces
             </h1>
             <p className="max-w-2xl text-balance text-sm sm:text-base text-brand-ink/85">
-              Verified hair salons, beauty salons, and stylists across the United States and Canada—browse by
+              Verified nail salons, nail technicians, and manicurists across the United States and Canada—browse by
               state or province, then by city. Every listing rated 3★ or higher
               on Google Maps.
             </p>
@@ -186,7 +186,7 @@ export default async function Home() {
       {canadaDirectory.length > 0 && (
         <section className="mx-auto max-w-6xl px-4 pt-8 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold text-navy">
-            Canadian Hair Salon Directories
+            Canadian Nail Salon Directories
           </h2>
           <p className="mt-2 text-sm text-foreground/70">
             Browse verified salons by Canadian province. Same
@@ -222,7 +222,7 @@ export default async function Home() {
             </h2>
             <p className="mt-1 text-sm text-foreground/70">
               Selected salons across our directories — verified listings for
-              clients comparing hair salons, beauty salons, and stylists.
+              clients comparing nail salons, nail technicians, and manicurists.
             </p>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {allFeatured.map((facility) => (
@@ -326,7 +326,7 @@ export default async function Home() {
               </h3>
               <p className="mt-2 text-sm text-foreground/70">
                 No signup required, no spam, just helpful information for
-                anyone booking a cut, color, or style.
+                anyone booking a manicure, pedicure, or nail service.
               </p>
             </article>
           </div>
@@ -340,8 +340,8 @@ export default async function Home() {
               Are You a Salon Owner?
             </h2>
             <p className="mt-3 max-w-3xl text-sm text-foreground/90">
-              Get your salon seen by clients actively searching for hair salons,
-              stylists, and beauty services in your city. Featured listings available.
+              Get your salon seen by clients actively searching for nail salons,
+              nail technicians, and manicure and pedicure services in your city. Featured listings available.
             </p>
             <div className="mt-5">
               <Link

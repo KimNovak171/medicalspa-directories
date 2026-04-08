@@ -12,7 +12,7 @@ import {
   salonCategorySchemaThings,
 } from "@/lib/careTypesProse";
 
-const siteUrl = "https://hairsalondirectories.com";
+const siteUrl = "https://nailsalondirectories.com";
 
 type StatePageProps = {
   params: Promise<{ stateSlug: string }>;
@@ -29,9 +29,9 @@ export async function generateMetadata({
 
   const { stateName, totalFacilities, cities } = await getStateSummary(safeSlug);
 
-  const title = `Hair Salons in ${stateName} | ${totalFacilities.toLocaleString()} Verified Listings | HairSalonDirectories.com`;
+  const title = `Nail Salons in ${stateName} | ${totalFacilities.toLocaleString()} Verified Listings | NailSalonDirectories.com`;
 
-  const descriptor = `Browse ${totalFacilities.toLocaleString()} verified hair salons across ${cities.length.toLocaleString()} ${stateName} cities. Find stylists and beauty salons — all rated 3 stars or higher on Google Maps.`;
+  const descriptor = `Browse ${totalFacilities.toLocaleString()} verified nail salons across ${cities.length.toLocaleString()} ${stateName} cities. Find nail technicians and manicurists — all rated 3 stars or higher on Google Maps.`;
 
   return {
     title,
@@ -46,14 +46,14 @@ export async function generateMetadata({
       title,
       description: descriptor,
       url: canonicalPath,
-      siteName: "HairSalonDirectories.com",
+      siteName: "NailSalonDirectories.com",
       type: "website",
       images: [
         {
           url: "/og-image.svg",
           width: 1200,
           height: 630,
-          alt: `${stateName} hair salon directory preview`,
+          alt: `${stateName} nail salon directory preview`,
         },
       ],
     },
@@ -78,7 +78,7 @@ export default async function StatePage({ params }: StatePageProps) {
   } = await getStateSummary(stateSlug ?? "");
   const resourcesUrl = getStateResourcesUrl(resolvedStateSlug);
   const salonFocusText =
-    "hair salons, beauty salons, hairdressers, extension technicians, replacement services, locticians, and hair care";
+    "nail salons, nail technicians, manicurists, manicures, and pedicures";
   const majorCities = [...cities]
     .sort((a, b) => b.facilityCount - a.facilityCount)
     .slice(0, 6)
@@ -99,7 +99,7 @@ export default async function StatePage({ params }: StatePageProps) {
       {
         "@type": "ListItem",
         position: 1,
-        name: "HairSalonDirectories.com",
+        name: "NailSalonDirectories.com",
         item: `${siteUrl}/`,
       },
       {
@@ -117,7 +117,7 @@ export default async function StatePage({ params }: StatePageProps) {
     mainEntity: [
       {
         "@type": "Question",
-        name: `How many hair salons are in ${stateName}?`,
+        name: `How many nail salons are in ${stateName}?`,
         acceptedAnswer: {
           "@type": "Answer",
           text: `Our directory lists ${totalFacilities.toLocaleString()} verified facilities across ${cities.length.toLocaleString()} cities.`,
@@ -125,7 +125,7 @@ export default async function StatePage({ params }: StatePageProps) {
       },
       {
         "@type": "Question",
-        name: `What types of hair salon services are available in ${stateName}?`,
+        name: `What types of nail salon services are available in ${stateName}?`,
         acceptedAnswer: {
           "@type": "Answer",
           text: `${careTypesSentence}.`,
@@ -145,17 +145,17 @@ export default async function StatePage({ params }: StatePageProps) {
   const webpageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: `Hair Salons in ${stateName}`,
+    name: `Nail Salons in ${stateName}`,
     url: `${siteUrl}/${resolvedStateSlug}`,
     isPartOf: {
       "@type": "WebSite",
-      name: "HairSalonDirectories.com",
+      name: "NailSalonDirectories.com",
       url: `${siteUrl}/`,
     },
     about: [
       {
         "@type": "Thing",
-        name: `${stateName} hair salons`,
+        name: `${stateName} nail salons`,
       },
       ...salonCategorySchemaThings(),
     ],
@@ -199,7 +199,7 @@ export default async function StatePage({ params }: StatePageProps) {
           State overview
         </p>
         <h1 className="mt-2 text-3xl font-semibold sm:text-4xl">
-          Hair Salons in {stateName}
+          Nail Salons in {stateName}
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-foreground/80">
           Explore {salonFocusText} across {stateName}, including major city
@@ -211,9 +211,9 @@ export default async function StatePage({ params }: StatePageProps) {
             rel="noopener noreferrer"
             className="underline underline-offset-2 hover:text-gold-soft"
           >
-            Professional Beauty Association (PBA) resources
+            NAILS Magazine industry resources
           </a>{" "}
-          for industry education, licensing context, and how to choose a salon or stylist.
+          for industry trends, licensing context, and how to choose a nail salon or nail technician.
         </p>
 
         <div className="mt-5 grid gap-4 text-sm sm:grid-cols-3">
@@ -276,8 +276,8 @@ export default async function StatePage({ params }: StatePageProps) {
               Salons by City in {stateName}
             </h2>
             <p className="mt-1 max-w-2xl text-sm text-slate-600">
-              Choose a city to browse hair salons, beauty salons, and stylists in{" "}
-              {stateName}, including cuts, color, extensions, and specialty hair care.
+              Choose a city to browse nail salons, nail technicians, and manicurists in{" "}
+              {stateName}, including manicures, pedicures, and gel or acrylic nail services.
             </p>
           </div>
           <div className="text-xs text-slate-500">

@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Hair Salon Directories",
+  title: "Privacy Policy | Nail Salon Directories",
   description:
-    "Privacy policy for HairSalonDirectories.com. How we collect, use, and protect your information when you use our hair salon directory.",
+    "Privacy policy for NailSalonDirectories.com. How we collect, use, and protect your information when you use our nail salon directory.",
   alternates: {
     canonical: "/privacy",
     languages: {
-      "en-us": "https://hairsalondirectories.com/privacy",
+      "en-us": "https://nailsalondirectories.com/privacy",
     },
   },
   openGraph: {
-    title: "Privacy Policy | Hair Salon Directories",
+    title: "Privacy Policy | Nail Salon Directories",
     url: "/privacy",
-    siteName: "HairSalonDirectories.com",
+    siteName: "NailSalonDirectories.com",
     type: "website",
   },
 };
@@ -38,7 +38,7 @@ export default function PrivacyPage() {
         <section className="space-y-4 text-sm text-slate-700">
           <h2 className="text-lg font-semibold text-navy">1. Introduction</h2>
           <p>
-            HairSalonDirectories.com (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates a directory website that helps clients find and compare hair salons and beauty businesses across the United States and Canada. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
+            NailSalonDirectories.com (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates a directory website that helps clients find and compare nail salons across the United States and Canada. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
           </p>
 
           <h2 className="text-lg font-semibold text-navy">2. Information We Collect</h2>

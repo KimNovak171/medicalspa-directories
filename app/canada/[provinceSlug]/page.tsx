@@ -10,7 +10,7 @@ import {
   salonCategorySchemaThings,
 } from "@/lib/careTypesProse";
 
-const siteUrl = "https://hairsalondirectories.com";
+const siteUrl = "https://nailsalondirectories.com";
 
 type ProvincePageProps = {
   params: Promise<{ provinceSlug: string }>;
@@ -27,7 +27,7 @@ export async function generateMetadata({
     safeSlug,
   );
 
-  const title = `Hair Salons in ${provinceName}, Canada | Hair Salon Directories`;
+  const title = `Nail Salons in ${provinceName}, Canada | Nail Salon Directories`;
   const descriptor = `Find ${totalFacilities.toLocaleString()} salons in ${provinceName}, Canada. Compare services and contact details. Verified listings with ratings and reviews.`;
 
   return {
@@ -40,14 +40,14 @@ export async function generateMetadata({
       title,
       description: descriptor,
       url: canonicalPath,
-      siteName: "HairSalonDirectories.com",
+      siteName: "NailSalonDirectories.com",
       type: "website",
       images: [
         {
           url: "/og-image.svg",
           width: 1200,
           height: 630,
-          alt: `${provinceName} hair salon directory preview`,
+          alt: `${provinceName} nail salon directory preview`,
         },
       ],
     },
@@ -72,7 +72,7 @@ export default async function ProvincePage({ params }: ProvincePageProps) {
   } = await getProvinceSummary(provinceSlug ?? "");
 
   const salonFocusText =
-    "hair salons, beauty salons, hairdressers, extension technicians, replacement services, locticians, and hair care";
+    "nail salons, nail technicians, manicurists, manicures, and pedicures";
   const majorCities = [...cities]
     .sort((a, b) => b.facilityCount - a.facilityCount)
     .slice(0, 6)
@@ -93,7 +93,7 @@ export default async function ProvincePage({ params }: ProvincePageProps) {
       {
         "@type": "ListItem",
         position: 1,
-        name: "HairSalonDirectories.com",
+        name: "NailSalonDirectories.com",
         item: `${siteUrl}/`,
       },
       {
@@ -117,7 +117,7 @@ export default async function ProvincePage({ params }: ProvincePageProps) {
     mainEntity: [
       {
         "@type": "Question",
-        name: `How many hair salons are in ${provinceName}?`,
+        name: `How many nail salons are in ${provinceName}?`,
         acceptedAnswer: {
           "@type": "Answer",
           text: `Our directory lists ${totalFacilities.toLocaleString()} verified facilities across ${cities.length.toLocaleString()} cities.`,
@@ -125,7 +125,7 @@ export default async function ProvincePage({ params }: ProvincePageProps) {
       },
       {
         "@type": "Question",
-        name: `What types of hair salon services are available in ${provinceName}?`,
+        name: `What types of nail salon services are available in ${provinceName}?`,
         acceptedAnswer: {
           "@type": "Answer",
           text: `${careTypesSentence}.`,
@@ -145,15 +145,15 @@ export default async function ProvincePage({ params }: ProvincePageProps) {
   const webpageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: `Hair Salons in ${provinceName}, Canada`,
+    name: `Nail Salons in ${provinceName}, Canada`,
     url: `${siteUrl}/canada/${resolvedProvinceSlug}`,
     isPartOf: {
       "@type": "WebSite",
-      name: "HairSalonDirectories.com",
+      name: "NailSalonDirectories.com",
       url: `${siteUrl}/`,
     },
     about: [
-      { "@type": "Thing", name: `${provinceName} hair salons` },
+      { "@type": "Thing", name: `${provinceName} nail salons` },
       ...salonCategorySchemaThings(),
     ],
     speakable: {
@@ -196,7 +196,7 @@ export default async function ProvincePage({ params }: ProvincePageProps) {
           Province overview
         </p>
         <h1 className="mt-2 text-3xl font-semibold sm:text-4xl">
-          Hair Salons in {provinceName}, Canada
+          Nail Salons in {provinceName}, Canada
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-foreground/80">
           Explore {salonFocusText} across {provinceName}, including major
@@ -265,8 +265,8 @@ export default async function ProvincePage({ params }: ProvincePageProps) {
               Salons by City in {provinceName}
             </h2>
             <p className="mt-1 max-w-2xl text-sm text-slate-600">
-              Choose a city to browse hair salons, beauty salons, and stylists in{" "}
-              {provinceName}, including cuts, color, extensions, and specialty hair care.
+              Choose a city to browse nail salons, nail technicians, and manicurists in{" "}
+              {provinceName}, including manicures, pedicures, and gel or acrylic nail services.
             </p>
           </div>
           <div className="text-xs text-slate-500">

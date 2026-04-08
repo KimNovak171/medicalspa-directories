@@ -9,8 +9,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const stats = getCanadaNationwideStats();
   const total = stats.totalFacilities.toLocaleString();
   const provinces = stats.provinceCount.toLocaleString();
-  const title = `Hair Salons in Canada | ${total} verified listings | Hair Salon Directories`;
-  const description = `Browse ${total} verified salons across ${provinces} provinces and territories—maps, contact info, and Google ratings. Every listing rated 3 stars or higher on Google Maps.`;
+  const title = `Nail Salons in Canada | ${total} verified listings | Nail Salon Directories`;
+  const description = `Browse ${total} verified nail salons across ${provinces} provinces and territories—maps, contact info, and Google ratings. Every listing rated 3 stars or higher on Google Maps.`;
 
   return {
     title,
@@ -22,14 +22,14 @@ export async function generateMetadata(): Promise<Metadata> {
       title,
       description,
       url: "/canada",
-      siteName: "HairSalonDirectories.com",
+      siteName: "NailSalonDirectories.com",
       type: "website",
       images: [
         {
           url: "/og-image.svg",
           width: 1200,
           height: 630,
-          alt: "Canada hair salon directory preview",
+          alt: "Canada nail salon directory preview",
         },
       ],
     },
@@ -46,13 +46,13 @@ export default async function CanadaLandingPage() {
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
           <div className="space-y-6 rounded-2xl bg-brand-gradient px-6 py-8 text-brand-ink shadow-sm sm:px-8 sm:py-10">
             <p className="inline-flex rounded-full border border-brand-ink/20 bg-white/35 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] backdrop-blur-sm">
-              Canadian Hair Salon Directories
+              Canadian Nail Salon Directories
             </p>
             <h1 className="text-balance text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
-              Hair Salons in Canada — Province by Province
+              Nail Salons in Canada — Province by Province
             </h1>
             <p className="max-w-2xl text-balance text-sm sm:text-base text-brand-ink/85">
-              Verified hair salons and beauty businesses across provinces and territories.
+              Verified nail salons across provinces and territories.
               Every listing rated 3★ or higher on Google Maps.
             </p>
           </div>

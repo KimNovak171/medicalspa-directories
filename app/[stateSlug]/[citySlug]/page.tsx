@@ -10,7 +10,7 @@ import {
 } from "@/lib/stateFacilities";
 import { salonCategorySchemaThings } from "@/lib/careTypesProse";
 
-const siteUrl = "https://hairsalondirectories.com";
+const siteUrl = "https://nailsalondirectories.com";
 
 type CityPageProps = {
   params: Promise<{ stateSlug: string; citySlug: string }>;
@@ -29,8 +29,8 @@ export async function generateMetadata({
   const { stateName, cityName, facilities: cityFacilities } =
     await getCityFacilities(safeState, safeCity);
   const count = Array.isArray(cityFacilities) ? cityFacilities.length : 0;
-  const title = `Hair Salons in ${cityName}, ${stateName} | Hair Salon Directories`;
-  const description = `Find trusted hair salons and stylists in ${cityName}, ${stateName}—browse ${count.toLocaleString()} verified listings with contact details, maps, and Google ratings so you can choose with confidence.`;
+  const title = `Nail Salons in ${cityName}, ${stateName} | Nail Salon Directories`;
+  const description = `Find trusted nail salons and nail technicians in ${cityName}, ${stateName}—browse ${count.toLocaleString()} verified listings with contact details, maps, and Google ratings so you can choose with confidence.`;
 
   return {
     title,
@@ -45,14 +45,14 @@ export async function generateMetadata({
       title,
       description,
       url: canonicalPath,
-      siteName: "HairSalonDirectories.com",
+      siteName: "NailSalonDirectories.com",
       type: "website",
       images: [
         {
           url: "/og-image.svg",
           width: 1200,
           height: 630,
-          alt: `${cityName}, ${stateName} hair salon directory preview`,
+          alt: `${cityName}, ${stateName} nail salon directory preview`,
         },
       ],
     },
@@ -109,7 +109,7 @@ export default async function CityPage({ params }: CityPageProps) {
       {
         "@type": "ListItem",
         position: 1,
-        name: "HairSalonDirectories.com",
+        name: "NailSalonDirectories.com",
         item: `${siteUrl}/`,
       },
       {
@@ -130,21 +130,21 @@ export default async function CityPage({ params }: CityPageProps) {
   const webpageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: `Hair Salons in ${cityName}, ${stateName}`,
+    name: `Nail Salons in ${cityName}, ${stateName}`,
     url: `${siteUrl}/${stateSlugNorm}/${citySlugNorm}`,
     isPartOf: {
       "@type": "WebSite",
-      name: "HairSalonDirectories.com",
+      name: "NailSalonDirectories.com",
       url: `${siteUrl}/`,
     },
     about: [
       {
         "@type": "Thing",
-        name: `${cityName} hair salons`,
+        name: `${cityName} nail salons`,
       },
       {
         "@type": "Thing",
-        name: `${stateName} salon listings`,
+        name: `${stateName} nail salon listings`,
       },
       ...salonCategorySchemaThings(),
     ],
@@ -169,7 +169,7 @@ export default async function CityPage({ params }: CityPageProps) {
           Salons by city
         </p>
         <h1 className="text-3xl font-semibold text-navy">
-          Hair Salons in {cityName}, {stateName}
+          Nail Salons in {cityName}, {stateName}
         </h1>
         <p className="max-w-2xl text-sm text-slate-600">
           {cityName} has {facilities.length.toLocaleString()} verified salon
@@ -178,7 +178,7 @@ export default async function CityPage({ params }: CityPageProps) {
         </p>
         <p className="max-w-2xl text-sm text-slate-600">
           Compare salons side by side, review services and contact details,
-          and find the right stylist or salon for you in{" "}
+          and find the right nail technician or salon for you in{" "}
           {stateName}.
         </p>
       </header>

@@ -3,33 +3,33 @@ import Link from "next/link";
 import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Hair Salon Directories",
+  title: "Contact Us | Nail Salon Directories",
   description:
-    "Get in touch with HairSalonDirectories.com. Send a message or email hello@directoriesnetwork.com for questions about our directory or featured listings.",
+    "Get in touch with NailSalonDirectories.com. Send a message or email hello@directoriesnetwork.com for questions about our directory or featured listings.",
   alternates: {
     canonical: "/contact",
     languages: {
-      "en-us": "https://hairsalondirectories.com/contact",
+      "en-us": "https://nailsalondirectories.com/contact",
     },
   },
   openGraph: {
-    title: "Contact Us | Hair Salon Directories",
+    title: "Contact Us | Nail Salon Directories",
     description:
-      "Contact HairSalonDirectories.com for questions about our directory or featured listings.",
+      "Contact NailSalonDirectories.com for questions about our directory or featured listings.",
     url: "/contact",
-    siteName: "HairSalonDirectories.com",
+    siteName: "NailSalonDirectories.com",
     type: "website",
   },
 };
 
-const siteUrl = "https://hairsalondirectories.com";
+const siteUrl = "https://nailsalondirectories.com";
 
 export default function ContactPage() {
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "HairSalonDirectories.com", item: `${siteUrl}/` },
+      { "@type": "ListItem", position: 1, name: "NailSalonDirectories.com", item: `${siteUrl}/` },
       { "@type": "ListItem", position: 2, name: "Contact", item: `${siteUrl}/contact` },
     ],
   };

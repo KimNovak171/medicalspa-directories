@@ -11,7 +11,7 @@ import {
   salonCategorySchemaThings,
 } from "@/lib/careTypesProse";
 
-const siteUrl = "https://hairsalondirectories.com";
+const siteUrl = "https://nailsalondirectories.com";
 
 type CanadaCityPageProps = {
   params: Promise<{ provinceSlug: string; citySlug: string }>;
@@ -28,8 +28,8 @@ export async function generateMetadata({
   const { provinceName, cityName, facilities: cityFacilities } =
     await getCanadaCityFacilities(safeProvince, safeCity);
   const count = Array.isArray(cityFacilities) ? cityFacilities.length : 0;
-  const title = `Hair Salons in ${cityName}, ${provinceName}, Canada | Hair Salon Directories`;
-  const description = `Find ${count.toLocaleString()} salons in ${cityName}, ${provinceName}. Compare services and contact details. Verified listings with ratings and reviews.`;
+  const title = `Nail Salons in ${cityName}, ${provinceName}, Canada | Nail Salon Directories`;
+  const description = `Find ${count.toLocaleString()} nail salons in ${cityName}, ${provinceName}. Compare services and contact details. Verified listings with ratings and reviews.`;
 
   return {
     title,
@@ -41,14 +41,14 @@ export async function generateMetadata({
       title,
       description,
       url: canonicalPath,
-      siteName: "HairSalonDirectories.com",
+      siteName: "NailSalonDirectories.com",
       type: "website",
       images: [
         {
           url: "/og-image.svg",
           width: 1200,
           height: 630,
-          alt: `${cityName}, ${provinceName} hair salon directory preview`,
+          alt: `${cityName}, ${provinceName} nail salon directory preview`,
         },
       ],
     },
@@ -107,7 +107,7 @@ export default async function CanadaCityPage({ params }: CanadaCityPageProps) {
       {
         "@type": "ListItem",
         position: 1,
-        name: "HairSalonDirectories.com",
+        name: "NailSalonDirectories.com",
         item: `${siteUrl}/`,
       },
       {
@@ -134,16 +134,16 @@ export default async function CanadaCityPage({ params }: CanadaCityPageProps) {
   const webpageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: `Hair Salons in ${cityName}, ${provinceName}, Canada`,
+    name: `Nail Salons in ${cityName}, ${provinceName}, Canada`,
     url: `${siteUrl}/canada/${provinceSlugNorm}/${citySlugNorm}`,
     isPartOf: {
       "@type": "WebSite",
-      name: "HairSalonDirectories.com",
+      name: "NailSalonDirectories.com",
       url: `${siteUrl}/`,
     },
     about: [
-      { "@type": "Thing", name: `${cityName} hair salons` },
-      { "@type": "Thing", name: `${provinceName} salon listings` },
+      { "@type": "Thing", name: `${cityName} nail salons` },
+      { "@type": "Thing", name: `${provinceName} nail salon listings` },
       ...salonCategorySchemaThings(),
     ],
     speakable: {
@@ -167,7 +167,7 @@ export default async function CanadaCityPage({ params }: CanadaCityPageProps) {
           Salons by city
         </p>
         <h1 className="text-3xl font-semibold text-navy">
-          Hair Salons in {cityName}, {provinceName}
+          Nail Salons in {cityName}, {provinceName}
         </h1>
         <p className="max-w-2xl text-sm text-slate-600">
           {cityName} has {facilities.length.toLocaleString()} verified

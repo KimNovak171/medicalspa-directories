@@ -12,11 +12,11 @@ export function generateMetadata({
   const regionCode = params.region.toUpperCase();
 
   return {
-    title: `Hair salons in ${regionCode}`,
-    description: `Explore hair salon and beauty options in ${regionCode} with HairSalonDirectories.com.`,
+    title: `Nail salons in ${regionCode}`,
+    description: `Explore nail salon options in ${regionCode} with NailSalonDirectories.com.`,
     openGraph: {
-      title: `Hair salons in ${regionCode} | HairSalonDirectories.com`,
-      description: `Browse salons and stylists in ${regionCode}.`,
+      title: `Nail salons in ${regionCode} | NailSalonDirectories.com`,
+      description: `Browse nail salons and nail technicians in ${regionCode}.`,
       url: `/locations/${params.region}`,
       type: "website",
     },
@@ -33,12 +33,12 @@ export default function RegionPage({ params }: RegionPageProps) {
           Salons by region
         </p>
         <h1 className="text-3xl font-semibold text-navy">
-          Hair salons in {regionCode}
+          Nail salons in {regionCode}
         </h1>
         <p className="max-w-2xl text-sm text-slate-600">
           This is a placeholder view for{" "}
           <span className="font-semibold">{regionCode}</span>. Here you&apos;ll
-          be able to browse hair salons and stylists in this state or
+          be able to browse nail salons and nail technicians in this state or
           province.
         </p>
         <div className="mt-6 rounded-xl border border-surface-muted bg-surface px-4 py-6 text-sm text-slate-500">

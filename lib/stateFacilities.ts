@@ -549,7 +549,7 @@ export function getGlobalStats(): GlobalStats {
 
 export function getStateResourcesUrl(stateSlug: string): string {
   void stateSlug;
-  return "https://www.probeauty.org";
+  return "https://www.nailsmag.com";
 }
 
 export function getHreflangForRegionSlug(

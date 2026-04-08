@@ -4,32 +4,32 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Advertise | Get Your Salon in Front of Clients",
   description:
-    "Featured and premium listings on HairSalonDirectories.com. Reach clients actively searching for hair salons, beauty salons, stylists, and hair care services across the United States.",
+    "Featured and premium listings on NailSalonDirectories.com. Reach clients actively searching for nail salons, nail technicians, manicures, and pedicures across the United States.",
   alternates: {
     canonical: "/advertise",
     languages: {
-      "en-us": "https://hairsalondirectories.com/advertise",
+      "en-us": "https://nailsalondirectories.com/advertise",
     },
   },
   openGraph: {
     title: "Advertise | Get Your Salon in Front of Clients",
     description:
-      "A featured listing puts your salon at the top of your city directory section and in front of high-intent visitors at the moment they are choosing a stylist or salon.",
+      "A featured listing puts your salon at the top of your city directory section and in front of high-intent visitors at the moment they are choosing a nail salon or nail technician.",
     url: "/advertise",
-    siteName: "HairSalonDirectories.com",
+    siteName: "NailSalonDirectories.com",
     type: "website",
     images: [
       {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "HairSalonDirectories.com advertise page preview",
+        alt: "NailSalonDirectories.com advertise page preview",
       },
     ],
   },
 };
 
-const siteUrl = "https://hairsalondirectories.com";
+const siteUrl = "https://nailsalondirectories.com";
 const STRIPE_LINK_49 = "https://buy.stripe.com/14AfZhfiG0bd1xI6vnfAc0y";
 const STRIPE_LINK_99 = "https://buy.stripe.com/bJefZh0nM3npa4ecTLfAc0z";
 
@@ -41,7 +41,7 @@ export default function AdvertisePage() {
       {
         "@type": "ListItem",
         position: 1,
-        name: "HairSalonDirectories.com",
+        name: "NailSalonDirectories.com",
         item: `${siteUrl}/`,
       },
       {
@@ -68,10 +68,10 @@ export default function AdvertisePage() {
           Get Your Salon in Front of Clients Who Are Ready to Book
         </h1>
         <p className="max-w-3xl text-sm text-slate-600">
-          HairSalonDirectories.com is visited by clients actively searching for
-          hair salons and beauty services across the United States. A featured listing puts
+          NailSalonDirectories.com is visited by clients actively searching for
+          nail salons and manicure and pedicure services across the United States. A featured listing puts
           your salon at the top of your city directory section and in front of
-          high-intent visitors at the moment they are choosing a stylist or salon.
+          high-intent visitors at the moment they are choosing a nail salon or nail technician.
         </p>
       </header>
 

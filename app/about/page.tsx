@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About This Directory | Hair Salon Directories",
+  title: "About This Directory | Nail Salon Directories",
   description:
-    "Learn about HairSalonDirectories.com — a trusted directory helping clients compare hair salons, beauty salons, hairdressers, extension technicians, and hair care services across the US and Canada.",
+    "Learn about NailSalonDirectories.com — a trusted directory helping clients compare nail salons, nail technicians, manicurists, manicures, and pedicures across the US and Canada.",
   alternates: {
     canonical: "/about",
     languages: {
-      "en-us": "https://hairsalondirectories.com/about",
+      "en-us": "https://nailsalondirectories.com/about",
     },
   },
   openGraph: {
-    title: "About This Directory | Hair Salon Directories",
+    title: "About This Directory | Nail Salon Directories",
     url: "/about",
-    siteName: "HairSalonDirectories.com",
+    siteName: "NailSalonDirectories.com",
     type: "website",
   },
 };
@@ -30,13 +30,13 @@ export default function AboutPage() {
           About This Directory
         </h1>
         <p className="max-w-3xl text-sm text-slate-600">
-          HairSalonDirectories.com is a professional, easy-to-use directory that helps clients find and compare hair salons and beauty businesses across the United States and Canada.
+          NailSalonDirectories.com is a professional, easy-to-use directory that helps clients find and compare nail salons across the United States and Canada.
         </p>
       </header>
 
       <div className="mt-10 max-w-3xl space-y-6 text-sm text-slate-700">
         <p>
-          We list verified salons — so you can explore options by state and city, compare contact details and ratings, and make informed decisions. Our listings are sourced from public information and verified where possible; we encourage you to confirm licenses and credentials with your state or provincial cosmetology or barbering board and to visit salons in person when possible.
+          We list verified salons — so you can explore options by state and city, compare contact details and ratings, and make informed decisions. Our listings are sourced from public information and verified where possible; we encourage you to confirm licenses and credentials with your state or provincial cosmetology board (including nail specialty rules where applicable) and to visit salons in person when possible.
         </p>
         <p>
           This site is for informational purposes only. We do not endorse any specific salon. Always verify licensing, inspections, and accreditation with the appropriate regulatory body in your area.
