@@ -62,13 +62,13 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex min-h-screen flex-col bg-surface text-foreground">
-          <header className="w-full border-b-[3px] border-teal bg-teal text-white">
+        <div className="flex min-h-screen flex-col bg-surface-muted text-foreground">
+          <header className="bg-brand-gradient w-full border-b-[3px] border-brand-champagne/50 text-brand-ink">
             <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
               <div className="flex items-center gap-6">
                 <Link
                   href="/"
-                  className="text-[11px] font-bold tracking-[0.28em] sm:text-xs text-white hover:text-teal-soft transition-colors"
+                  className="text-[11px] font-bold tracking-[0.28em] sm:text-xs text-brand-ink transition-colors hover:opacity-80"
                   aria-label="HairSalonDirectories.com – go to homepage"
                 >
                   HairSalonDirectories.com
@@ -76,31 +76,31 @@ export default async function RootLayout({
                 <nav className="flex items-center gap-4" aria-label="Main navigation">
                   <Link
                     href="/"
-                    className="text-xs font-medium text-white/90 hover:text-teal-soft transition-colors"
+                    className="text-xs font-medium text-brand-ink/90 transition-colors hover:text-brand-ink"
                   >
                     USA
                   </Link>
                   <Link
                     href="/canada"
-                    className="text-xs font-medium text-white/90 hover:text-teal-soft transition-colors"
+                    className="text-xs font-medium text-brand-ink/90 transition-colors hover:text-brand-ink"
                   >
                     Canada
                   </Link>
                   <Link
                     href="/contact"
-                    className="text-xs font-medium text-white/90 hover:text-teal-soft transition-colors"
+                    className="text-xs font-medium text-brand-ink/90 transition-colors hover:text-brand-ink"
                   >
                     Contact
                   </Link>
                   <Link
                     href="/advertise"
-                    className="inline-flex items-center rounded-full bg-teal px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-teal-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    className="inline-flex items-center rounded-full border border-brand-ink/20 bg-white/45 px-4 py-2 text-xs font-semibold text-brand-ink shadow-sm backdrop-blur-sm transition hover:bg-white/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-champagne focus-visible:ring-offset-2 focus-visible:ring-offset-surface-muted"
                   >
                     Advertise
                   </Link>
                 </nav>
               </div>
-              <p className="ml-4 hidden max-w-xs text-right text-xs text-white/90 sm:block">
+              <p className="ml-4 hidden max-w-xs text-right text-xs text-brand-ink/85 sm:block">
                 Trusted hair salon directory for clients choosing their next appointment.
               </p>
             </div>
