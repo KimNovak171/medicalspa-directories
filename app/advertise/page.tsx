@@ -30,8 +30,8 @@ export const metadata: Metadata = {
 };
 
 const siteUrl = "https://hairsalondirectories.com";
-const STRIPE_LINK_49 = "https://buy.stripe.com/aFa4gz5I66zB7W6g5XfAc0w";
-const STRIPE_LINK_99 = "https://buy.stripe.com/bJe6oH3zY2jl1xIbPHfAc0x";
+const STRIPE_LINK_49 = "https://buy.stripe.com/14AfZhfiG0bd1xI6vnfAc0y";
+const STRIPE_LINK_99 = "https://buy.stripe.com/bJefZh0nM3npa4ecTLfAc0z";
 
 export default function AdvertisePage() {
   const breadcrumbSchema = {
