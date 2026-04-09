@@ -30,8 +30,8 @@ export const metadata: Metadata = {
 };
 
 const siteUrl = "https://medicalspadirectories.com";
-const STRIPE_LINK_49 = "https://buy.stripe.com/cNi4gzfiG9LNfoycTLfAc0A";
-const STRIPE_LINK_99 = "https://buy.stripe.com/5kQ7sL2vU7DF0tE06ZfAc0B";
+const STRIPE_LINK_49 = "https://buy.stripe.com/7sYfZhgmKbTVfoycTLfAc0E";
+const STRIPE_LINK_99 = "https://buy.stripe.com/cNi4gz4E2bTV6S2g5XfAc0F";
 
 export default function AdvertisePage() {
   const breadcrumbSchema = {
