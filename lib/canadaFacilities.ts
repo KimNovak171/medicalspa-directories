@@ -86,6 +86,7 @@ type CanadaFacilityRaw = {
   name: string;
   care_type?: string;
   type?: string;
+  category?: string;
   /** Google-style category string (comma-separated), common in scraped exports. */
   subtypes?: string;
   address: string;
@@ -191,7 +192,7 @@ function buildCanadaMapsUrl(
 }
 
 function careTypesFromCanadaRaw(f: CanadaFacilityRaw): string[] {
-  const single = (f.care_type ?? f.type ?? "").trim();
+  const single = (f.care_type ?? f.type ?? f.category ?? "").trim();
   if (single) return [single];
   const sub = (f.subtypes ?? "").trim();
   if (sub) {
