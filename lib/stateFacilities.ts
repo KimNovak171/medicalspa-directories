@@ -29,6 +29,7 @@ type AlternateFormatFacilityRaw = {
   name: string;
   care_type?: string;
   type?: string;
+  category?: string;
   /** Google-style category (common in scraped exports). */
   subtypes?: string;
   address: string;
@@ -92,7 +93,13 @@ function transformAlternateFormatFacilities(
       rating: f.rating ?? null,
       reviewCount: f.reviews ?? null,
       careTypes: (() => {
-        const label = (f.care_type ?? f.type ?? f.subtypes ?? "").trim();
+        const label = (
+          f.care_type ??
+          f.type ??
+          f.subtypes ??
+          f.category ??
+          ""
+        ).trim();
         return label ? [label] : [];
       })(),
       featured: f.featured ?? undefined,
