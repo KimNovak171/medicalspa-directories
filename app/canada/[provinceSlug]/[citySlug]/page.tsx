@@ -7,11 +7,11 @@ import {
   getOtherCitiesInProvince,
 } from "@/lib/canadaFacilities";
 import {
-  DEFAULT_SALON_CARE_TYPES_SENTENCE,
-  salonCategorySchemaThings,
+  formatCareTypesClause,
+  medSpaCategorySchemaThings,
 } from "@/lib/careTypesProse";
 
-const siteUrl = "https://nailsalondirectories.com";
+const siteUrl = "https://medicalspadirectories.com";
 
 type CanadaCityPageProps = {
   params: Promise<{ provinceSlug: string; citySlug: string }>;
@@ -28,8 +28,8 @@ export async function generateMetadata({
   const { provinceName, cityName, facilities: cityFacilities } =
     await getCanadaCityFacilities(safeProvince, safeCity);
   const count = Array.isArray(cityFacilities) ? cityFacilities.length : 0;
-  const title = `Nail Salons in ${cityName}, ${provinceName}, Canada | Nail Salon Directories`;
-  const description = `Find ${count.toLocaleString()} nail salons in ${cityName}, ${provinceName}. Compare services and contact details. Verified listings with ratings and reviews.`;
+  const title = `Medical Spas in ${cityName}, ${provinceName}, Canada | Medical Spa Directories`;
+  const description = `Find ${count.toLocaleString()} medical spas in ${cityName}, ${provinceName}. Compare aesthetic treatments, laser services, and injectables. Verified listings with ratings and reviews.`;
 
   return {
     title,
@@ -41,14 +41,14 @@ export async function generateMetadata({
       title,
       description,
       url: canonicalPath,
-      siteName: "NailSalonDirectories.com",
+      siteName: "MedicalSpaDirectories.com",
       type: "website",
       images: [
         {
           url: "/og-image.svg",
           width: 1200,
           height: 630,
-          alt: `${cityName}, ${provinceName} nail salon directory preview`,
+          alt: `${cityName}, ${provinceName} medical spa directory preview`,
         },
       ],
     },
@@ -95,10 +95,7 @@ export default async function CanadaCityPage({ params }: CanadaCityPageProps) {
         .filter(Boolean),
     ),
   );
-  const careTypesText =
-    careTypes.length > 0
-      ? careTypes.slice(0, 4).join(", ")
-      : DEFAULT_SALON_CARE_TYPES_SENTENCE;
+  const careTypesClause = formatCareTypesClause(careTypes);
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -107,7 +104,7 @@ export default async function CanadaCityPage({ params }: CanadaCityPageProps) {
       {
         "@type": "ListItem",
         position: 1,
-        name: "NailSalonDirectories.com",
+        name: "MedicalSpaDirectories.com",
         item: `${siteUrl}/`,
       },
       {
@@ -134,17 +131,17 @@ export default async function CanadaCityPage({ params }: CanadaCityPageProps) {
   const webpageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: `Nail Salons in ${cityName}, ${provinceName}, Canada`,
+    name: `Medical Spas in ${cityName}, ${provinceName}, Canada`,
     url: `${siteUrl}/canada/${provinceSlugNorm}/${citySlugNorm}`,
     isPartOf: {
       "@type": "WebSite",
-      name: "NailSalonDirectories.com",
+      name: "MedicalSpaDirectories.com",
       url: `${siteUrl}/`,
     },
     about: [
-      { "@type": "Thing", name: `${cityName} nail salons` },
-      { "@type": "Thing", name: `${provinceName} nail salon listings` },
-      ...salonCategorySchemaThings(),
+      { "@type": "Thing", name: `${cityName} medical spa listings` },
+      { "@type": "Thing", name: `${provinceName} medical spa directory listings` },
+      ...medSpaCategorySchemaThings(),
     ],
     speakable: {
       "@type": "SpeakableSpecification",
@@ -164,18 +161,18 @@ export default async function CanadaCityPage({ params }: CanadaCityPageProps) {
       />
       <header className="space-y-4">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
-          Salons by city
+          Medical spas by city
         </p>
         <h1 className="text-3xl font-semibold text-navy">
-          Nail Salons in {cityName}, {provinceName}
+          Medical Spas in {cityName}, {provinceName}
         </h1>
         <p className="max-w-2xl text-sm text-slate-600">
           {cityName} has {facilities.length.toLocaleString()} verified
-          salon listings including {careTypesText}. Browse all options below,
+          medical spa listings {careTypesClause}. Browse all options below,
           each with Google Maps profile links and ratings data where available.
         </p>
         <p className="max-w-2xl text-sm text-slate-600">
-          Compare salons side by side, review services and contact
+          Compare practices side by side, review aesthetic treatments and contact
           details, and share this page with friends or family as you plan
           your next visit in {provinceName}.
         </p>
@@ -213,13 +210,13 @@ export default async function CanadaCityPage({ params }: CanadaCityPageProps) {
 
       <section className="mt-8 space-y-4">
         <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-navy">
-          Salons in {cityName}
+          Medical spas in {cityName}
         </h2>
 
         {facilities.length === 0 ? (
           <p className="text-sm text-slate-600">
             We don&apos;t have listings for {cityName}, {provinceName}{" "}
-            yet. As new data becomes available, salons will appear here.
+            yet. As new data becomes available, listings will appear here.
           </p>
         ) : (
           <div className="grid gap-4 md:grid-cols-2">
@@ -248,7 +245,7 @@ export default async function CanadaCityPage({ params }: CanadaCityPageProps) {
                 <p className="font-medium">{city.cityName}</p>
                 <p className="text-xs text-slate-600">
                   {city.facilityCount.toLocaleString()}{" "}
-                  {city.facilityCount === 1 ? "salon" : "salons"}
+                  {city.facilityCount === 1 ? "listing" : "listings"}
                 </p>
               </Link>
             ))}

@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://nailsalondirectories.com/sitemap.xml",
+    sitemap: "https://medicalspadirectories.com/sitemap.xml",
   };
 }
 

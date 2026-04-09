@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About This Directory | Nail Salon Directories",
+  title: "About This Directory | Medical Spa Directories",
   description:
-    "Learn about NailSalonDirectories.com — a trusted directory helping clients compare nail salons, nail technicians, manicurists, manicures, and pedicures across the US and Canada.",
+    "Learn about MedicalSpaDirectories.com — a trusted directory helping clients compare medical spas, medi spas, aesthetic clinics, laser treatments, injectables, and skin care across the US and Canada.",
   alternates: {
     canonical: "/about",
     languages: {
-      "en-us": "https://nailsalondirectories.com/about",
+      "en-us": "https://medicalspadirectories.com/about",
     },
   },
   openGraph: {
-    title: "About This Directory | Nail Salon Directories",
+    title: "About This Directory | Medical Spa Directories",
     url: "/about",
-    siteName: "NailSalonDirectories.com",
+    siteName: "MedicalSpaDirectories.com",
     type: "website",
   },
 };
@@ -30,19 +30,19 @@ export default function AboutPage() {
           About This Directory
         </h1>
         <p className="max-w-3xl text-sm text-slate-600">
-          NailSalonDirectories.com is a professional, easy-to-use directory that helps clients find and compare nail salons across the United States and Canada.
+          MedicalSpaDirectories.com is a professional, easy-to-use directory that helps clients find and compare medical spas and aesthetic practices across the United States and Canada.
         </p>
       </header>
 
       <div className="mt-10 max-w-3xl space-y-6 text-sm text-slate-700">
         <p>
-          We list verified salons — so you can explore options by state and city, compare contact details and ratings, and make informed decisions. Our listings are sourced from public information and verified where possible; we encourage you to confirm licenses and credentials with your state or provincial cosmetology board (including nail specialty rules where applicable) and to visit salons in person when possible.
+          We list verified practices — so you can explore options by state and city, compare contact details and ratings, and make informed decisions. Our listings are sourced from public information and verified where possible; we encourage you to confirm physician supervision, licensing, and credentials with your state or provincial medical or aesthetic regulatory bodies where applicable and to visit providers in person when possible.
         </p>
         <p>
-          This site is for informational purposes only. We do not endorse any specific salon. Always verify licensing, inspections, and accreditation with the appropriate regulatory body in your area.
+          This site is for informational purposes only. We do not endorse any specific practice. Always verify licensing, inspections, and accreditation with the appropriate regulatory body in your area.
         </p>
         <p>
-          Salon owners can learn about featured and premium listings on our{" "}
+          Practice owners can learn about featured and premium listings on our{" "}
           <Link href="/advertise" className="font-medium text-teal hover:text-teal-soft">
             Advertise
           </Link>{" "}
