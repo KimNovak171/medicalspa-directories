@@ -42,6 +42,54 @@ body {
   color: var(--foreground);
 }
 
+/* Rendered markdown from remark-html (blog posts) */
+@layer components {
+  .blog-markdown {
+    @apply max-w-3xl text-sm leading-relaxed text-slate-700;
+  }
+
+  .blog-markdown h2 {
+    @apply mt-8 text-xl font-semibold text-navy first:mt-0;
+  }
+
+  .blog-markdown h3 {
+    @apply mt-6 text-lg font-semibold text-navy;
+  }
+
+  .blog-markdown p {
+    @apply mt-4 first:mt-0;
+  }
+
+  .blog-markdown ul,
+  .blog-markdown ol {
+    @apply mt-4 list-outside space-y-2 ps-5;
+  }
+
+  .blog-markdown ul {
+    @apply list-disc;
+  }
+
+  .blog-markdown ol {
+    @apply list-decimal;
+  }
+
+  .blog-markdown li {
+    @apply ps-1;
+  }
+
+  .blog-markdown a {
+    @apply font-medium text-teal underline-offset-2 hover:text-teal-soft hover:underline;
+  }
+
+  .blog-markdown strong {
+    @apply font-semibold text-navy;
+  }
+
+  .blog-markdown blockquote {
+    @apply mt-4 border-s-4 border-teal/40 ps-4 text-slate-600 italic;
+  }
+}
+
 /* Hero + header: blush → champagne (135deg) */
 .bg-brand-gradient {
   background-image: linear-gradient(135deg, #f2cccd 0%, #d4af7a 100%);
