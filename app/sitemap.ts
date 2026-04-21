@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { getCanadaDirectoryIndex } from "@/lib/canadaFacilities";
 import { getDirectoryIndex } from "@/lib/stateFacilities";
 
+export const dynamic = "force-static";
+
 const siteUrl = "https://medicalspadirectories.com";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

@@ -1,6 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+  experimental: {
+    cpus: 1,
+  },
   // Large city pages can exceed the default 60s during static export/prerender.
   staticPageGenerationTimeout: 300,
   /** Use `NEXT_DIST_DIR` when `.next` is locked (e.g. Dropbox on Windows). */
