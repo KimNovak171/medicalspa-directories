@@ -151,6 +151,9 @@ export default function RootLayout({
                 <Link href="/advertise" className="hover:text-teal-soft">
                   Advertise
                 </Link>
+                <Link href="/claim" className="hover:text-teal-soft">
+                  Verify Your Listing
+                </Link>
                 <Link href="/advertise" className="hover:text-teal-soft">
                   For medical spas &amp; aesthetic practices
                 </Link>
